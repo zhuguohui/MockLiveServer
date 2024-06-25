@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class MockUser {
     String name;
-    String giftName;
+
     int index = 0;
     Function1<Void, Boolean> callBack;
 
@@ -18,9 +18,9 @@ public class MockUser {
 
     }
 
-    public void sendGift(long time, String giftName, WebSocket webSocket) {
+    public void sendGift(long time, Gift gift, WebSocket webSocket) {
         new Thread(() -> {
-            this.giftName = giftName;
+
             final long endTime = System.currentTimeMillis() + time;
             Random random = new Random();
             long nowTime = System.currentTimeMillis();
@@ -33,7 +33,10 @@ public class MockUser {
                     e.printStackTrace();
                 }
 
-                webSocket.send(name + "送出礼物" + giftName + index);
+                boolean win= random.nextInt(10)>8;
+                int winningMultiple=win?random.nextInt(1000):0;
+                String info = GiftUtil.createGift(gift, name, winningMultiple);
+                webSocket.send(info);
                 index++;
                 nowTime = System.currentTimeMillis();
                 webSocketCanUse = callBack.call(null);

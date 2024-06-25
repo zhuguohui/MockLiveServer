@@ -34,32 +34,32 @@ public class MockGiftInfo implements Serializable {
      * winningMultiple : 0
      */
 
-    private String active;
-    private String adminActive;
-    private String avatar;
-    private String balance;
-    private String carFlash;
-    private String flag;
-    private int giftNum;
-    private GiftsInfoBean giftsInfo;
-    private String isAdmin;
-    private String isAnchor;
-    private String isBeautifulNum;
-    private String isStealth;
-    private boolean justPushCamara;
-    private String liveUserNickName;
-    private String liveUserid;
-    private String managedUid;
-    private String msgContent;
-    private String msgType;
-    private String nickname;
-    private int richLevel;
-    private int sendGiftTime;
-    private String tagBgColor;
-    private String userid;
-    private String username;
-    private String usertype;
-    private int winningMultiple;
+     String active;
+     String adminActive;
+     String avatar;
+     String balance;
+     String carFlash;
+     String flag;
+     int giftNum;
+     GiftsInfoBean giftsInfo;
+     String isAdmin;
+     String isAnchor;
+     String isBeautifulNum;
+     String isStealth;
+     boolean justPushCamara;
+     String liveUserNickName;
+     String liveUserid;
+     String managedUid;
+     String msgContent;
+     String msgType;
+     String nickname;
+     int richLevel;
+     int sendGiftTime;
+     String tagBgColor;
+     String userid;
+     String username;
+     String usertype;
+     int winningMultiple;
 
 
     public static class GiftsInfoBean implements Serializable {
@@ -86,25 +86,25 @@ public class MockGiftInfo implements Serializable {
          * winningMultiple : 0
          */
 
-        private String cateid;
-        private String current;
-        private String flash;
-        private String id;
-        private String image;
-        private String intr;
-        private String ispc;
-        private String isphone;
-        private String luckLevel;
-        private String mp3;
-        private String name;
-        private int num;
-        private String paytype;
-        private String price;
-        private String sort;
-        private String status;
-        private String tag;
-        private String tagBgColor;
-        private String uptime;
-        private int winningMultiple;
+         String cateid;
+         String current;
+         String flash;
+         String id;
+         String image;
+         String intr;
+         String ispc;
+         String isphone;
+         String luckLevel;
+         String mp3;
+         String name;
+         int num;
+         String paytype;
+         String price;
+         String sort;
+         String status;
+         String tag;
+         String tagBgColor;
+         String uptime;
+         int winningMultiple;
     }
 }

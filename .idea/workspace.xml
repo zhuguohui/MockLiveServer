@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21cdb313-679e-49a1-b60b-86bb4ff28e79" name="Changes" comment="">
+    <list default="true" id="21cdb313-679e-49a1-b60b-86bb4ff28e79" name="Changes" comment="f">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/Gift.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/GiftUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MockServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MockServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/Function1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/Function1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/MockGiftInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/MockGiftInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/MockUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/MockUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/g1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/g1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/g2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/g2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/g3.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/g3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/g4.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/g4.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +50,18 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveInnerDialog.RECENTS_KEY">
+      <recent name="org.example.data" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Client">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Client" />
@@ -68,6 +69,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GiftUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.data.GiftUtil" />
+      <module name="LiveServer.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,6 +104,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GiftUtil" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.MockServer" />
       </list>
@@ -104,6 +119,14 @@
       <option name="presentableId" value="Default" />
       <updated>1719302525872</updated>
     </task>
+    <task id="LOCAL-00001" summary="f">
+      <created>1719309428840</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719309428840</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -117,16 +140,11 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/MockServer.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="f" />
+    <option name="LAST_COMMIT_MESSAGE" value="f" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

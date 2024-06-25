@@ -8,6 +8,7 @@ import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import okhttp3.mockwebserver.RecordedRequest;
 import org.example.data.Function1;
+import org.example.data.Gift;
 import org.example.data.MockUser;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -65,10 +66,10 @@ public class MockServer {
                         MockUser user2 = new MockUser("李四", callback);
                         MockUser user3 = new MockUser("王五", callback);
                         MockUser user4 = new MockUser("王六", callback);
-                        user.sendGift(10*1000,"飞机",webSocket);
-                        user2.sendGift(10*1000,"坦克",webSocket);
-                        user3.sendGift(10*1000,"跑车",webSocket);
-                        user4.sendGift(10*1000,"大炮",webSocket);
+                        user.sendGift(10*1000, Gift.CHHH,webSocket);
+                        user2.sendGift(10*1000,Gift.HXMT,webSocket);
+                        user3.sendGift(10*1000,Gift.LYRM,webSocket);
+                        user4.sendGift(10*1000,Gift.LYRM,webSocket);
 
                     }
 
