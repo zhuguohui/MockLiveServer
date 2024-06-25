@@ -8,11 +8,17 @@ import java.util.Random;
 public class MockUser {
     String name;
 
+    String userId;
+
     int index = 0;
     Function1<Void, Boolean> callBack;
 
-    public MockUser(String name, Function1<Void, Boolean> callBack) {
+    String headUrl;
+
+    public MockUser(String name,String userId,String headUrl, Function1<Void, Boolean> callBack) {
         this.name = name;
+        this.userId=userId;
+        this.headUrl=headUrl;
 
         this.callBack = callBack;
 
@@ -35,7 +41,7 @@ public class MockUser {
 
                 boolean win= random.nextInt(10)>8;
                 int winningMultiple=win?random.nextInt(1000):0;
-                String info = GiftUtil.createGift(gift, name, winningMultiple);
+                String info = GiftUtil.createGift(gift, name,userId,headUrl, winningMultiple);
                 webSocket.send(info);
                 index++;
                 nowTime = System.currentTimeMillis();

@@ -11,10 +11,12 @@ public class GiftUtil {
     static Gson gson=new Gson();
 
 
-    public static String createGift(Gift giftName, String userName, int winningMultiple){
+    public static String createGift(Gift giftName, String userName, String userId, String headUrl, int winningMultiple){
         InputStream path = GiftUtil.class.getResourceAsStream(giftName.path);
         BufferedReader reader = new BufferedReader(new InputStreamReader(path));
         MockGiftInfo mockGiftInfo = gson.fromJson(reader, MockGiftInfo.class);
+        mockGiftInfo.userid=userId;
+        mockGiftInfo.avatar=headUrl;
         mockGiftInfo.nickname=userName;
         mockGiftInfo.giftsInfo.winningMultiple=winningMultiple;
         return gson.toJson(mockGiftInfo);

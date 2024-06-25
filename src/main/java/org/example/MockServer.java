@@ -10,10 +10,12 @@ import okhttp3.mockwebserver.RecordedRequest;
 import org.example.data.Function1;
 import org.example.data.Gift;
 import org.example.data.MockUser;
+import org.example.data.RandomImage;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
+import java.net.InetAddress;
 
 
 public class MockServer {
@@ -34,7 +36,9 @@ public class MockServer {
         });
 
         try {
-            mMockWebServer.start(3344);
+
+
+            mMockWebServer.start(InetAddress.getLocalHost(),3344);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -62,14 +66,17 @@ public class MockServer {
                         mWebSocket = webSocket;
 //                        mWebSocket.send("我是服务器，你好呀");
 
-                        MockUser user = new MockUser("张三", callback);
-                        MockUser user2 = new MockUser("李四", callback);
-                        MockUser user3 = new MockUser("王五", callback);
-                        MockUser user4 = new MockUser("王六", callback);
-                        user.sendGift(10*1000, Gift.CHHH,webSocket);
-                        user2.sendGift(10*1000,Gift.HXMT,webSocket);
-                        user3.sendGift(10*1000,Gift.LYRM,webSocket);
-                        user4.sendGift(10*1000,Gift.LYRM,webSocket);
+                        MockUser user = new MockUser("张三","1001", RandomImage.get(100,100), callback);
+                        MockUser user2 = new MockUser("李四","1002", RandomImage.get(100,100),callback);
+                        MockUser user3 = new MockUser("王五","1003",RandomImage.get(100,100), callback);
+                        MockUser user4 = new MockUser("王六","1004",RandomImage.get(100,100), callback);
+                        MockUser user5 = new MockUser("王七","1004", RandomImage.get(100,100),callback);
+                        long time=5*60*1000;
+                        user.sendGift(time, Gift.CHHH,webSocket);
+                        user2.sendGift(time,Gift.HXMT,webSocket);
+                        user3.sendGift(time,Gift.LYRM,webSocket);
+                        user4.sendGift(time,Gift.LYRM,webSocket);
+                        user5.sendGift(time,Gift.LYRM,webSocket);
 
                     }
 
