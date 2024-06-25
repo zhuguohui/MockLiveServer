@@ -17,6 +17,7 @@ public class GiftUtil {
         MockGiftInfo mockGiftInfo = gson.fromJson(reader, MockGiftInfo.class);
         mockGiftInfo.userid=userId;
         mockGiftInfo.avatar=headUrl;
+        mockGiftInfo.sendGiftTime=  System.currentTimeMillis();
         mockGiftInfo.nickname=userName;
         mockGiftInfo.giftsInfo.winningMultiple=winningMultiple;
         return gson.toJson(mockGiftInfo);

@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21cdb313-679e-49a1-b60b-86bb4ff28e79" name="Changes" comment="f">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/RandomImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="21cdb313-679e-49a1-b60b-86bb4ff28e79" name="Changes" comment="优化IP绑定">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MockServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MockServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/GiftUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/GiftUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/MockUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/MockUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/MockGiftInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/MockGiftInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719309428840</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="优化IP绑定">
+      <created>1719324606414</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719324606414</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,7 +164,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="f" />
-    <option name="LAST_COMMIT_MESSAGE" value="f" />
+    <MESSAGE value="优化IP绑定" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化IP绑定" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

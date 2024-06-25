@@ -54,7 +54,7 @@ public class MockGiftInfo implements Serializable {
      String msgType;
      String nickname;
      int richLevel;
-     int sendGiftTime;
+     long sendGiftTime;
      String tagBgColor;
      String userid;
      String username;
