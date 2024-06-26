@@ -68,13 +68,15 @@ public class MockServer {
                         MockUser user2 = new MockUser("李四","1002",callback);
                         MockUser user3 = new MockUser("王五","1003", callback);
                         MockUser user4 = new MockUser("王六","1004", callback);
-                        MockUser user5 = new MockUser("王七","1004",callback);
+                        MockUser user5 = new MockUser("王七","1005",callback);
+                        MockUser user6 = new MockUser("老九","1006",callback);
                         long time=5*60*1000;
                         user.sendGift(time, Gift.CHHH,webSocket);
                         user2.sendGift(time,Gift.HXMT,webSocket);
                         user3.sendGift(time,Gift.LYRM,webSocket);
                         user4.sendGift(time,Gift.LYRM,webSocket);
                         user5.sendGift(time,Gift.LYRM,webSocket);
+                        user6.sendGift(time,Gift.HXMT,webSocket);
 
                     }
 
