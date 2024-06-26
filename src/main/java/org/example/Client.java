@@ -5,6 +5,8 @@ import okio.ByteString;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 
 public class Client {
@@ -16,9 +18,15 @@ public class Client {
 
     //初始化WebSocket
     public static void init() {
-        String mWbSocketUrl = "ws://127.0.0.1:3344";
+        String ip="";
+        try {
+             ip= InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            throw new RuntimeException(e);
+        }
+        String mWbSocketUrl = "ws://"+ip+":3344";
         OkHttpClient mClient = new OkHttpClient.Builder()
-                .pingInterval(10, TimeUnit.SECONDS)
+                .pingInterval(1, TimeUnit.SECONDS)
                 .build();
         Request request = new Request.Builder()
                 .url(mWbSocketUrl)
@@ -45,6 +53,7 @@ public class Client {
         @Override
         public void onFailure(@NotNull WebSocket webSocket, @NotNull Throwable t, @Nullable Response response) {
             super.onFailure(webSocket, t, response);
+            Log.e(TAG,"连接失败:"+t.getMessage());
 
         }
 
@@ -74,6 +83,7 @@ public class Client {
         public void onOpen(@NotNull WebSocket webSocket, @NotNull Response response) {
             super.onOpen(webSocket, response);
             Log.e(TAG, "连接成功！");
+            webSocket.send("aaa");
         }
     }
 

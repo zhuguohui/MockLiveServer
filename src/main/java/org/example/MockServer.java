@@ -10,7 +10,6 @@ import okhttp3.mockwebserver.RecordedRequest;
 import org.example.data.Function1;
 import org.example.data.Gift;
 import org.example.data.MockUser;
-import org.example.data.RandomImage;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -64,13 +63,12 @@ public class MockServer {
                         //有客户端连接时回调
                         Log.e(TAG, "服务器收到客户端连接成功回调：");
                         mWebSocket = webSocket;
-//                        mWebSocket.send("我是服务器，你好呀");
 
-                        MockUser user = new MockUser("张三","1001", RandomImage.get(100,100), callback);
-                        MockUser user2 = new MockUser("李四","1002", RandomImage.get(100,100),callback);
-                        MockUser user3 = new MockUser("王五","1003",RandomImage.get(100,100), callback);
-                        MockUser user4 = new MockUser("王六","1004",RandomImage.get(100,100), callback);
-                        MockUser user5 = new MockUser("王七","1004", RandomImage.get(100,100),callback);
+                        MockUser user = new MockUser("张三","1001" , callback);
+                        MockUser user2 = new MockUser("李四","1002",callback);
+                        MockUser user3 = new MockUser("王五","1003", callback);
+                        MockUser user4 = new MockUser("王六","1004", callback);
+                        MockUser user5 = new MockUser("王七","1004",callback);
                         long time=5*60*1000;
                         user.sendGift(time, Gift.CHHH,webSocket);
                         user2.sendGift(time,Gift.HXMT,webSocket);
@@ -84,7 +82,7 @@ public class MockServer {
                     public void onMessage(@NotNull WebSocket webSocket, @NotNull String text) {
                         super.onMessage(webSocket, text);
 
-                        //   Log.e(TAG, "服务器收到消息：" + text);
+                        Log.e(TAG, "服务器收到消息：" + text);
                     }
 
                     @Override

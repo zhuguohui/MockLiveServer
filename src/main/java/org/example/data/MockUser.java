@@ -3,7 +3,10 @@ package org.example.data;
 import okhttp3.WebSocket;
 import org.example.Log;
 
+import java.awt.*;
 import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class MockUser {
     String name;
@@ -15,17 +18,27 @@ public class MockUser {
 
     String headUrl;
 
-    public MockUser(String name,String userId,String headUrl, Function1<Void, Boolean> callBack) {
+    static ExecutorService executor = Executors.newFixedThreadPool(3);
+
+    public MockUser(String name,String userId , Function1<Void, Boolean> callBack) {
         this.name = name;
         this.userId=userId;
-        this.headUrl=headUrl;
+        //生成随机图片
+        this.headUrl=RandomImage.get(100,100,getRandomColor(),getRandomColor(),name);
 
         this.callBack = callBack;
 
     }
 
+    private static Color getRandomColor(){
+        Random random=new Random();
+        Color color=new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255));
+        return color;
+    }
+
     public void sendGift(long time, Gift gift, WebSocket webSocket) {
-        new Thread(() -> {
+
+       executor.submit(() -> {
 
             final long endTime = System.currentTimeMillis() + time;
             Random random = new Random();
@@ -50,7 +63,6 @@ public class MockUser {
                     Log.e("User","用户"+name+" 退出");
                 }
             }
-
-        }).start();
+        });
     }
 }
