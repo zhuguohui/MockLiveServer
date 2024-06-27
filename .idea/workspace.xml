@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21cdb313-679e-49a1-b60b-86bb4ff28e79" name="Changes" comment="优化IP绑定">
+    <list default="true" id="21cdb313-679e-49a1-b60b-86bb4ff28e79" name="Changes" comment="优化测试逻辑">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/GiftUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/GiftUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/MockGiftInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/MockGiftInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/MockUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/MockUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,8 +114,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RandomImage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.data.RandomImage" />
+      <module name="LiveServer.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.data.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RandomImage" />
         <item itemvalue="Application.MockServer" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.GiftUtil" />
@@ -146,7 +159,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719324606414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="优化头像生成逻辑">
+      <created>1719370415097</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719370415097</updated>
+    </task>
+    <task id="LOCAL-00004" summary="优化测试逻辑">
+      <created>1719383577013</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719383577013</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,7 +192,25 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="f" />
     <MESSAGE value="优化IP绑定" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化IP绑定" />
+    <MESSAGE value="优化头像生成逻辑" />
+    <MESSAGE value="优化测试逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化测试逻辑" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Client.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/data/MockUser.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

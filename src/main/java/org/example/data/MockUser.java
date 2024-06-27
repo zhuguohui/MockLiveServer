@@ -18,7 +18,9 @@ public class MockUser {
 
     String headUrl;
 
-    static ExecutorService executor = Executors.newFixedThreadPool(3);
+    Random random = new Random();
+
+    static ExecutorService executor = Executors.newFixedThreadPool(6);
 
     public MockUser(String name,String userId , Function1<Void, Boolean> callBack) {
         this.name = name;
@@ -41,7 +43,7 @@ public class MockUser {
        executor.submit(() -> {
 
             final long endTime = System.currentTimeMillis() + time;
-            Random random = new Random();
+
             long nowTime = System.currentTimeMillis();
             //可用
             boolean webSocketCanUse = callBack.call(null);
