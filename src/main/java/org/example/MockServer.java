@@ -64,26 +64,22 @@ public class MockServer {
                         Log.e(TAG, "服务器收到客户端连接成功回调：");
                         mWebSocket = webSocket;
 
-                        MockUser user = new MockUser("张三","1001" , callback);
-                        MockUser user2 = new MockUser("李四","1002",callback);
-                        MockUser user3 = new MockUser("王五","1003", callback);
-                        MockUser user4 = new MockUser("王六","1004", callback);
-                        MockUser user5 = new MockUser("王七","1005",callback);
-                        MockUser user6 = new MockUser("老九","1006",callback);
-                        long time=5*60*1000;
-                        user.sendGift(time, Gift.CHHH,webSocket);
-                        user2.sendGift(time,Gift.HXMT,webSocket);
-                        user3.sendGift(time,Gift.LYRM,webSocket);
-                        user4.sendGift(time,Gift.LYRM,webSocket);
-                        user5.sendGift(time,Gift.LYRM,webSocket);
-                        user6.sendGift(time,Gift.HXMT,webSocket);
+
 
                     }
 
                     @Override
                     public void onMessage(@NotNull WebSocket webSocket, @NotNull String text) {
                         super.onMessage(webSocket, text);
+                        if(text.startsWith("startTest")){
+                            try {
+                                String numberStr = text.substring(text.lastIndexOf("=")+1);
+                                doTest(Integer.parseInt(numberStr));
+                            }catch (Exception e){
+                                Log.e("server","启动测试失败:"+e.getMessage());
+                            }
 
+                        }
                         Log.e(TAG, "服务器收到消息：" + text);
                     }
 
@@ -108,6 +104,21 @@ public class MockServer {
                         mWebSocket.close(1000,"正常关闭");
                         mWebSocket=null;
                     }
+
+                    private static final int testTime=5*60*1000;
+                    private  void doTest(int pNumber){
+
+                        for(int i=0;i<pNumber;i++){
+                            String id="100"+i;
+                            String name="用户"+i;
+                            MockUser mockUser=new MockUser(name,id,callback);
+                            mockUser.sendGift(testTime,Gift.values()[i%Gift.values().length],mWebSocket);
+                        }
+                    }
                 });
     }
+
+
+
+
 }

@@ -20,7 +20,7 @@ public class MockUser {
 
     Random random = new Random();
 
-    static ExecutorService executor = Executors.newFixedThreadPool(6);
+    static ExecutorService executor = Executors.newCachedThreadPool();
 
     public MockUser(String name,String userId , Function1<Void, Boolean> callBack) {
         this.name = name;
@@ -49,7 +49,8 @@ public class MockUser {
             boolean webSocketCanUse = callBack.call(null);
             while (nowTime < endTime && webSocketCanUse) {
                 try {
-                    Thread.sleep(random.nextInt(50));
+//                    Thread.sleep(random.nextInt(50));
+                    Thread.sleep(20);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
