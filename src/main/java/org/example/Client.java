@@ -24,7 +24,8 @@ public class Client {
         } catch (UnknownHostException e) {
             throw new RuntimeException(e);
         }
-        String mWbSocketUrl = "ws://"+ip+":3344";
+//        String mWbSocketUrl = "ws://"+ip+":3344";
+        String mWbSocketUrl = "ws://192.168.9.184:3344";
         OkHttpClient mClient = new OkHttpClient.Builder()
                 .pingInterval(1, TimeUnit.SECONDS)
                 .build();
@@ -65,13 +66,13 @@ public class Client {
 //            onWSDataChanged(DATE_NORMAL, text);
             //测试发消息
 //            webSocket.send("我是客户端，你好啊");
-            i++;
+          /*  i++;
             if(i>1000){
 
                 Log.e(TAG, "客户端不需要礼物了" );
                 //1000表示正常关闭
                 webSocket.close(1000,"不需要了");
-            }
+            }*/
         }
 
         @Override
@@ -83,7 +84,7 @@ public class Client {
         public void onOpen(@NotNull WebSocket webSocket, @NotNull Response response) {
             super.onOpen(webSocket, response);
             Log.e(TAG, "连接成功！");
-            webSocket.send("aaa");
+            webSocket.send("startTest pNumber=3");
         }
     }
 
